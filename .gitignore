@@ -1,0 +1,8 @@
+discord_items.txt 
+watchlist.txt
+venv/
+Misc/
+.env
+ignore/
+.ipynb_checkpoints/
+__pycache__/
