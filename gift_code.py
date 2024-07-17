@@ -57,28 +57,6 @@ def gift_code(lowered):
         print(user_info, server_busy)
     return user_info
 
-
-def chunk_list(input_list, chunk_size):
-    for i in range(0, len(input_list), chunk_size):
-        yield input_list[i:i + chunk_size]
-
-# Example list with 200+ elements
-my_list = list(range(200))
-
-a = get_all_ids()
-print(a)
-print(len(a))
-
-def split_list(input_list, chunk_size):
-    return [input_list[i:i + chunk_size] for i in range(0, len(input_list), chunk_size)]
-
-chunked_lists = split_list(a, 50)
-print(type(chunked_lists))
-
-for idx, chunk in enumerate(chunked_lists):
-    print(f"Chunk {idx + 1}: {chunk}")
-
 if __name__ == "__main__":
-    #gift = "847dPBVex"
-    #gift_code(gift)
-    pass
+    gift = "847dPBVex"
+    gift_code(gift)

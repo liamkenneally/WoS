@@ -110,5 +110,5 @@ if __name__ == "__main__":
 #    bulk_register()
     
 # when scipt is executed gets all users from DB and applys the giftcode one by one to each user
-    gift = "847dPBVex"
+    gift = "DC780k"
     gift_code(gift)

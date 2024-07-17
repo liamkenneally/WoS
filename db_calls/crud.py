@@ -36,3 +36,28 @@ def update_furnace(userID, new_furnacelvl):
     furnace_lvl.furnace = new_furnace
     session.commit()
     return f'Furnace lvl updated to {new_furnace}'
+
+
+def delete_user_by_id(user_id):
+    # Fetch the user by id
+    user = session.query(User).get(user_id)
+    if user:
+        # Delete the user
+        session.delete(user)
+        session.commit()
+        print(" ")
+        print("============================= DELETED =================")
+        print(f'{user} deleted from the DB')
+        print("============================= DELETED =================")
+        print(" ")
+        return f"User with id {user_id} has been deleted."
+    else:
+        return f"User with id {user_id} does not exist."
+
+if __name__ == "__main__":
+    user_id_to_delete = input("Enter the user ID to delete: ")
+    try:
+        user_id_to_delete = int(user_id_to_delete)
+        delete_user_by_id(user_id_to_delete)
+    except ValueError:
+        print("Please enter a valid integer ID.")
